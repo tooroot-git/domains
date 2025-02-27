@@ -1,9 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
+import themePlugin from '@replit/vite-plugin-shadcn-theme-json';
+import { fileURLToPath, URL } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), runtimeErrorOverlay(), themePlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
@@ -12,7 +18,12 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "client/public"), // 📌 עכשיו זה ישים את ה-build במקום הנכון!
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+  },
+  server: {
+    hmr: {
+      overlay: false,
+    },
   },
 });
