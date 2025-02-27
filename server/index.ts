@@ -3,6 +3,11 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import chatRouter from "./routes/chat";
 import compression from "compression";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 // Enable Gzip compression for all responses
@@ -69,3 +74,11 @@ app.use((req, res, next) => {
     log(`serving on port ${port}`);
   });
 })();
+
+function serveStatic(app: express.Express) {
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+  });
+}
