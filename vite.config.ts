@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
-import themePlugin from '@replit/vite-plugin-shadcn-theme-json';
-import { fileURLToPath } from 'url';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import runtimeErrorOverlay from "vite-plugin-runtime-error-overlay";
+import themePlugin from "vite-plugin-theme";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), runtimeErrorOverlay(), themePlugin()],
