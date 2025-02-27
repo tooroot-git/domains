@@ -1,0 +1,57 @@
+
+Enable text compression Potential savings of 343 KiB
+Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. Learn more about text compression.LCPFCP
+URL
+Transfer Size
+Potential Savings
+bestlivecams.com 1st party
+491.9 KiB	343.2 KiB
+/assets/index-DV0N9d_C.js(bestlivecams.com)
+423.6 KiB
+287.5 KiB
+/assets/index-DFEKok2u.css(bestlivecams.com)
+66.1 KiB
+54.3 KiB
+https://bestlivecams.com
+2.3 KiB
+1.4 KiB
+Eliminate render-blocking resources Potential savings of 40 ms
+Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. Learn how to eliminate render-blocking resources.LCPFCP
+URL
+Transfer Size
+Potential Savings
+bestlivecams.com 1st party
+66.5 KiB	80 ms
+/assets/index-DFEKok2u.css(bestlivecams.com)
+66.5 KiB
+80 ms
+Reduce unused JavaScript Potential savings of 193 KiB
+Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. Learn how to reduce unused JavaScript.LCPFCP
+URL
+Transfer Size
+Potential Savings
+bestlivecams.com 1st party
+423.5 KiB	193.1 KiB
+/assets/index-DV0N9d_C.js(bestlivecams.com)
+423.5 KiB
+193.1 KiB
+Reduce unused CSS Potential savings of 52 KiB
+Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. Learn how to reduce unused CSS.LCPFCP
+URL
+Transfer Size
+Potential Savings
+bestlivecams.com 1st party
+66.1 KiB	51.5 KiB
+/assets/index-DFEKok2u.css(bestlivecams.com)
+66.1 KiB
+51.5 KiB
+Avoid serving legacy JavaScript to modern browsers Potential savings of 0 KiB
+Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. For your bundled JavaScript, adopt a modern script deployment strategy using module/nomodule feature detection to reduce the amount of code shipped to modern browsers, while retaining support for legacy browsers. Learn how to use modern JavaScriptLCPFCP
+URL
+Potential Savings
+bestlivecams.com 1st party
+0.2 KiB
+/assets/index-DV0N9d_C.js(bestlivecams.com)
+0.2 KiB
+/assets/index-DV0N9d_C.js:160:2146(bestlivecams.com)
+@babel/plugin-transform-classes

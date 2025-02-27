@@ -1,0 +1,14 @@
+app.get("/sitemap.xml", (req, res) => {
+    const hostname = req.hostname; // מזהה את הדומיין הנוכחי
+    res.type("application/xml");
+    res.send(
+`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://${hostname}/</loc>
+        <priority>1.00</priority>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+</urlset>`
+    );
+});

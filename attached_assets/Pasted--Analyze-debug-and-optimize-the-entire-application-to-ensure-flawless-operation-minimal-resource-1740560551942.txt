@@ -1,0 +1,40 @@
+
+
+Analyze, debug, and optimize the entire application to ensure flawless operation, minimal resource consumption, and removal of unused files while preserving all existing functionality and avoiding unnecessary changes.
+
+Instructions:
+	1.	Full Debugging (Without Unnecessary Changes)
+	•	Perform an in-depth scan for errors, exceptions, inefficiencies, and potential bugs.
+	•	Do not upgrade, change, or refactor any component unless it directly affects stability, security, or efficiency.
+	•	Fix only what is necessary to ensure the system works optimally, without altering its intended behavior.
+	2.	Performance Optimization (Only Where Needed)
+	•	Identify and optimize only critical CPU, memory, and disk usage bottlenecks.
+	•	Improve only necessary loops, database queries, and function calls if they significantly impact performance.
+	•	Do not modify workflows unless absolutely required for the task.
+	3.	Code Cleanup & Structure Enhancement (Strictly Non-Destructive)
+	•	Remove only unused variables, functions, and files.
+	•	Ensure no deletions or changes impact functionality.
+	•	Apply best practices only where necessary for stability and maintainability.
+	4.	Dependency & Resource Management (No Forced Upgrades)
+	•	Identify and remove unnecessary or outdated dependencies, but do not upgrade packages unless critical.
+	•	Ensure all libraries remain compatible with the current system.
+	•	No modifications to framework versions or package managers unless explicitly requested.
+	5.	Security & Stability (Without Overengineering)
+	•	Identify vulnerabilities only if they pose a real risk (e.g., SQL injection, XSS, authentication flaws).
+	•	Strengthen security only if needed for task completion—no excessive hardening that alters workflows.
+	•	Ensure the application remains stable, predictable, and resilient to crashes.
+	6.	Final Testing & Verification (No Functionality Changes)
+	•	Conduct only necessary automated and manual tests to confirm stability and performance.
+	•	Log only essential changes and provide clear explanations for modifications.
+	•	Suggest further improvements without making unauthorized changes.
+
+Critical Rules:
+	•	Do not upgrade, rewrite, or modify anything unless strictly required for debugging or optimization.
+	•	Preserve all existing workflows, functionality, and configurations.
+	•	No automatic changes or refactoring unless there’s a clear necessity.
+	•	Provide detailed reports on every modification, with justifications.
+	•	If unsure whether a change is needed, document it and request confirmation instead of making the change.
+
+Expected Output:
+
+A fully optimized, lightweight, and secure application that runs smoothly, consumes minimal resources, and retains all existing functionality intact. No unnecessary modifications.

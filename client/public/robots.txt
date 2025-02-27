@@ -1,0 +1,14 @@
+const express = require("express");
+const app = express();
+
+app.get("/robots.txt", (req, res) => {
+    const hostname = req.hostname; // מקבל את הדומיין הנוכחי
+    res.type("text/plain");
+    res.send(
+`User-agent: *
+Allow: /
+Sitemap: https://${hostname}/sitemap.xml`
+    );
+});
+
+app.listen(3000, () => console.log("Server running on port 3000"));

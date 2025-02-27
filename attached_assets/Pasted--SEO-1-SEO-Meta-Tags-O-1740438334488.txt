@@ -1,0 +1,69 @@
+תודה על כל הקבצים. ביצעתי בדיקה של ה-SEO בהתבסס על מה שסיפקת, והנה הדוח המלא:
+
+✅ 1. SEO Meta Tags (On-Page SEO):
+	•	Title Tag: חסר בקובץ index.html. כדאי להוסיף <title>Buy Premium Domains for Cybersecurity, Live Cams, OSINT, and Web Solutions</title> ישירות בקובץ או באמצעות Helmet אם זה מטופל בקוד ה-React.
+	•	Meta Description: קיים ותואם להנחיות ה-SEO.
+	•	Robots Meta Tag: מוגדר נכון עם index, follow, מה שמאפשר לגוגל לאנדקס את העמוד.
+	•	Open Graph (OG):
+	•	og:type מוגדר כ-website – תקין.
+	•	og:site_name מוגדר כ-Premium Domain Marketplace – מתאים לנושא האתר.
+	•	Twitter Cards: מוגדר כ-summary_large_image – תקין לשיתוף ברשתות חברתיות.
+
+🗝️ 2. מילות מפתח (Keywords):
+	•	אין תג <meta name="keywords">, אך זה מקובל כיום מכיוון שגוגל לא נותן לזה חשיבות.
+	•	מומלץ לשלב מילות מפתח בתוך תוכן העמוד ולא רק במטא טאגים. בדוק שדומיינים כמו OsintFox.com ו-LiveCams.channel מופיעים בצורה טבעית בטקסט.
+
+💾 3. Structured Data (Schema Markup):
+	•	הקובץ schema.ts מראה שהתוכנית היא להשתמש ב-JSON-LD, אך לא מצאתי שהוא מוטמע ב-index.html.
+	•	יש להוסיף JSON-LD ישירות ב-index.html או באמצעות Helmet בקוד ה-React.
+	•	לדוגמה:
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "OsintFox.com",
+  "description": "Premium OSINT domain name for cybersecurity tools and platforms.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "15000",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+	•	אם האתר דינמי, יש לוודא שכשמשנים דומיין, גם תוכן ה-JSON-LD משתנה בהתאם.
+
+⚡ 4. מהירות וביצועים (Performance):
+	•	אתה משתמש ב-Cloudflare, שזה מעולה למהירות ו-CDN.
+	•	וודא שכל התמונות מועלות בפורמט WebP כדי להאיץ את טעינת העמוד.
+	•	הקובץ main.tsx נטען כ-module שזה מעולה לדפדפנים מודרניים.
+
+🌍 5. Indexability (סריקה ואינדוקס):
+	•	robots.txt: לא קיים – מומלץ ליצור קובץ /robots.txt עם ההגדרות הבאות:
+
+User-agent: *
+Allow: /
+Sitemap: https://yourdomain.com/sitemap.xml
+
+	•	sitemap.xml: חסר – צור מפת אתר שתכלול את כל הדומיינים באופן דינמי.
+
+💡 שיפורים נוספים:
+	1.	Title Tags דינמיים לפי דומיין: ודא שה-Helmet ב-React מגדיר את ה-Title באופן שונה לכל דומיין. לדוגמה:
+
+<Helmet>
+    <title>Buy OsintFox.com – Premium OSINT Domain for Sale</title>
+</Helmet>
+
+	2.	Favicon: יש favicon.ico, וזה מצוין למיתוג האתר.
+	3.	תאימות לנייד (Mobile-Friendly): תג ה-viewport מוגדר נכון עם maximum-scale=1 כדי למנוע הגדלה לא רצויה בנייד.
+
+🏁 סיכום:
+
+🔹 האתר במצב טוב מבחינת SEO בסיסי, אבל צריך:
+	•	✅ להוסיף JSON-LD דינמי לפי הדומיין שמוצג.
+	•	✅ להוסיף Title Tags מותאמים אישית לכל דומיין.
+	•	✅ ליצור קבצי robots.txt ו-sitemap.xml לאינדוקס טוב יותר.
+
+רוצה שאכין את הקבצים החסרים עבורך? 😊
